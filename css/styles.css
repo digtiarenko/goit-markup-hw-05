@@ -135,10 +135,24 @@ input[type="radio"].visually-hidden {
 
 /* ___________________ Главная секция________________ */
 .hero-container {
-  /* Что бы видно было белый текст */
-  background-color: #2f303a;
-  text-align: center;
   height: 600px;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/Hero_Img.jpg);
+  /* outline: #212121 3px solid; */
+  background-color: #c4c4c4;
+
+  text-align: center;
+
   padding-top: 200px;
 }
 .hero-title {
@@ -178,7 +192,16 @@ input[type="radio"].visually-hidden {
 .our-benefits-list {
   display: flex;
 }
+.our-benefits-item::before {
+  content: "";
 
+  height: 120px;
+  display: block;
+  background-image: url(../images/clock1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f4fa;
+}
 .our-benefits-item {
   width: 270px;
 }
@@ -193,7 +216,7 @@ input[type="radio"].visually-hidden {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-top: 0;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 .our-benefits p {
