@@ -192,15 +192,26 @@ input[type="radio"].visually-hidden {
 .our-benefits-list {
   display: flex;
 }
+/* ____________________Добавляем иконки через ::before____________________ */
 .our-benefits-item::before {
   content: "";
-
   height: 120px;
   display: block;
-  background-image: url(../images/clock1.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f5f4fa;
+}
+.antenna::before {
+  background-image: url(../images/antenna1.svg);
+}
+.clock::before {
+  background-image: url(../images/clock1.svg);
+}
+.diagram::before {
+  background-image: url(../images/diagram1.svg);
+}
+.austranaut::before {
+  background-image: url(../images/astronaut1.svg);
 }
 .our-benefits-item {
   width: 270px;
