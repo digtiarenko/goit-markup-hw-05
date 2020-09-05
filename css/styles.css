@@ -247,7 +247,7 @@ input[type="radio"].visually-hidden {
 .what-we-do-list li:not(:last-child) {
   margin-right: 30px;
 }
-.our-team h2 {
+.section-title {
   color: var(--primary-text-color);
   font-weight: bold;
   font-size: 36px;
@@ -259,7 +259,7 @@ input[type="radio"].visually-hidden {
 }
 
 /* ________________________Наша команда__________________ */
-.our-team {
+.basic-section {
   padding-top: 94px;
 }
 .our-team-list {
@@ -276,7 +276,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 30px;
 }
 
-.our-team h4 {
+.basic-section h4 {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -285,7 +285,7 @@ input[type="radio"].visually-hidden {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-.our-team p {
+.basic-section p {
   color: var(--secondary-text-color);
   font-weight: normal;
   font-size: 16px;
