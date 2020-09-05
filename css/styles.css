@@ -193,7 +193,7 @@ input[type="radio"].visually-hidden {
   display: flex;
 }
 /* ____________________Добавляем иконки через ::before____________________ */
-.our-benefits-item::before {
+/* .our-benefits-item::before {
   content: "";
   height: 120px;
   display: block;
@@ -212,6 +212,12 @@ input[type="radio"].visually-hidden {
 }
 .austranaut::before {
   background-image: url(../images/astronaut1.svg);
+} */
+.our-benefits-item svg {
+  margin: 25px 100px;
+}
+div.background {
+  background-color: #f5f4fa;
 }
 .our-benefits-item {
   width: 270px;
@@ -261,6 +267,10 @@ input[type="radio"].visually-hidden {
 /* ________________________Наша команда__________________ */
 .basic-section {
   padding-top: 94px;
+  padding-bottom: 94px;
+}
+.basic-section.team {
+  background-color: #f5f4fa;
 }
 .our-team-list {
   display: flex;
@@ -300,23 +310,30 @@ input[type="radio"].visually-hidden {
 }
 .clients-list a {
   display: block;
-  width: 170px;
-  height: 90px;
-  outline: 2px solid tomato;
+  width: 168px;
+  height: 88px;
+  /* outline: 2px solid tomato; */
+}
+.clients-link {
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
 }
 .clients-link:not(:last-child) {
   margin-right: 30px;
 }
+/* width: 50px;
+  height: 50px; */
 .icon-logo {
-  width: 50px;
-  height: 50px;
-  background-position: center;
+  margin-left: 65px;
 }
 
 /* _________________Футер________________________ */
 /* Что бы видно было белый текст */
 .footer {
-  margin-top: 94px;
+  /* margin-top: 94px; */
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
