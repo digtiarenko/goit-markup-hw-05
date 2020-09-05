@@ -72,6 +72,7 @@ input[type="radio"].visually-hidden {
 .header-address .contacts {
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 }
 .header-nav {
   display: flex;
@@ -103,6 +104,7 @@ input[type="radio"].visually-hidden {
 .link:focus {
   color: var(--accent-text-color);
 }
+
 .contacts {
   color: var(--secondary-text-color);
   font-weight: 500;
@@ -111,18 +113,24 @@ input[type="radio"].visually-hidden {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-  display: block;
-
+  display: flex;
   margin-right: 50px;
+}
+.contacts svg {
+  margin-right: 10px;
+  fill: currentColor;
 }
 .contacts:last-child {
   margin-right: 0;
 }
-.contacts:hover {
-  color: var(--accent-text-color);
-}
+.contacts:hover,
 .contacts:focus {
   color: var(--accent-text-color);
+}
+
+.contacts svg:hover,
+.contacts svg:focus {
+  fill: var(--accent-text-color);
 }
 .container {
   width: 1200px;
@@ -192,27 +200,7 @@ input[type="radio"].visually-hidden {
 .our-benefits-list {
   display: flex;
 }
-/* ____________________Добавляем иконки через ::before____________________ */
-/* .our-benefits-item::before {
-  content: "";
-  height: 120px;
-  display: block;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #f5f4fa;
-}
-.antenna::before {
-  background-image: url(../images/antenna1.svg);
-}
-.clock::before {
-  background-image: url(../images/clock1.svg);
-}
-.diagram::before {
-  background-image: url(../images/diagram1.svg);
-}
-.austranaut::before {
-  background-image: url(../images/astronaut1.svg);
-} */
+
 .our-benefits-item svg {
   margin: 25px 100px;
 }
@@ -308,15 +296,30 @@ div.background {
 .clients-list {
   display: flex;
 }
-.clients-list a {
-  display: block;
+.icon-logo {
+  display: flex;
   width: 168px;
   height: 88px;
-  /* outline: 2px solid tomato; */
-}
-.clients-link {
   border: 1px solid #afb1b8;
-  box-sizing: border-box;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
+.icon-logo svg {
+  fill: #afb1b8;
+}
+
+/* __________________________________Анимаци при ховере  */
+
+.icon-logo:hover svg,
+.icon-logo:focus svg {
+  fill: var(--accent-text-color);
+}
+.icon-logo:hover {
+  border: 1px solid #2196f3;
+}
+
+.clients-link {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
@@ -324,12 +327,6 @@ div.background {
 .clients-link:not(:last-child) {
   margin-right: 30px;
 }
-/* width: 50px;
-  height: 50px; */
-.icon-logo {
-  margin-left: 65px;
-}
-
 /* _________________Футер________________________ */
 /* Что бы видно было белый текст */
 .footer {
