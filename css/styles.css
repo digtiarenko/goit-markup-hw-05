@@ -294,6 +294,24 @@ input[type="radio"].visually-hidden {
   margin-top: 0;
   margin-bottom: 0;
 }
+/* ____________________Постоянные клиенты____________________ */
+.clients-list {
+  display: flex;
+}
+.clients-list a {
+  display: block;
+  width: 170px;
+  height: 90px;
+  outline: 2px solid tomato;
+}
+.clients-link:not(:last-child) {
+  margin-right: 30px;
+}
+.icon-logo {
+  width: 50px;
+  height: 50px;
+  background-position: center;
+}
 
 /* _________________Футер________________________ */
 /* Что бы видно было белый текст */
