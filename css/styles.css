@@ -156,11 +156,9 @@ input[type="radio"].visually-hidden {
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/Hero_Img.jpg);
-  /* outline: #212121 3px solid; */
+
   background-color: #c4c4c4;
-
   text-align: center;
-
   padding-top: 200px;
 }
 .hero-title {
@@ -315,10 +313,12 @@ div.background {
   height: 20px;
   fill: #afb1b8;
 }
-.social-network-item:hover .social-network-logo {
+.social-network-item:hover .social-network-logo,
+.social-network-item:focus .social-network-logo {
   fill: #ffffff;
 }
-.social-network-item:hover {
+.social-network-item:hover,
+.social-network-item:focus {
   background-color: var(--accent-text-color);
 }
 
@@ -345,7 +345,8 @@ div.background {
 .icon-logo:focus svg {
   fill: var(--accent-text-color);
 }
-.icon-logo:hover {
+.icon-logo:hover,
+.icon-logo:focus {
   border: 1px solid #2196f3;
 }
 
@@ -358,7 +359,14 @@ div.background {
   margin-right: 30px;
 }
 /* _________________Футер________________________ */
-/* Что бы видно было белый текст */
+
+.footer > .container {
+  display: flex;
+}
+.footer-column:not(:last-child) {
+  margin-right: 70px;
+}
+
 .footer {
   /* margin-top: 94px; */
   padding-top: 60px;
@@ -380,8 +388,28 @@ div.background {
   margin-top: 9px;
   margin-bottom: 9px;
 }
+p.h3 {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
 .footer .contacts {
   margin-bottom: 9px;
+}
+.footer .social-network-logo {
+  fill: #ffffff;
+}
+
+.footer .social-network-item {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer .social-network-item:hover,
+.footer .social-network-item:focus {
+  background-color: var(--accent-text-color);
 }
 
 /* ____________СТРАНИЦА ПОРТФОЛИО__________________
@@ -445,6 +473,11 @@ div.background {
 }
 .portfolio-list li:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+.portfolio-list li:hover,
+.portfolio-list li:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-list a {

@@ -28,10 +28,17 @@
           </ul>
         </nav>
         <address class="header-address">
-          <a class="contacts" href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
+          <a class="contacts" href="mailto:info@devstudio.com">
+            <svg width="16" height="12">
+              <use href="./images/symbol-defs.svg#icon-envelope"></use>
+            </svg>
+            info@devstudio.com</a
           >
-          <a class="contacts" href="call:+380961111111">+38 096 111 11 11</a>
+          <a class="contacts" href="call:+380961111111"
+            ><svg width="10" height="16">
+              <use href="./images/symbol-defs.svg#icon-smartphone"></use></svg
+            >+38 096 111 11 11</a
+          >
         </address>
       </div>
     </header>
@@ -151,14 +158,49 @@
     <!-- ________________Футер_________________________ -->
     <footer class="footer">
       <div class="container">
-        <a class="logo" href="./index.html"><span>Web</span>Studio</a>
-        <address>
-          <p>г. Киев, пр-т Леси Украинки, 26</p>
-          <a class="contacts" href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
-          >
-          <a class="contacts" href="call:+380961111111">+38 096 111 11 11</a>
-        </address>
+        <div class="footer-column">
+          <a class="logo" href="./index.html"><span>Web</span>Studio</a>
+          <address>
+            <p>г. Киев, пр-т Леси Украинки, 26</p>
+            <a class="contacts" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+            <a class="contacts" href="call:+380961111111">+38 096 111 11 11</a>
+          </address>
+        </div>
+        <div class="footer-column">
+          <p class="h3">Присоединяйтесь</p>
+          <ul class="social-network-list">
+            <li>
+              <a class="social-network-item" href="#">
+                <svg class="social-network-logo">
+                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-network-item" href="#">
+                <svg class="social-network-logo">
+                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-network-item" href="#">
+                <svg class="social-network-logo">
+                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-network-item" href="#">
+                <svg class="social-network-logo">
+                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
