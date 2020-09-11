@@ -252,16 +252,18 @@ div.background {
 .thumb {
   position: relative;
 }
-.what-we-do-list .h3 {
+.thumb .h3 {
   position: absolute;
+  padding-top: 22px;
+  padding-bottom: 22px;
   bottom: 0;
   right: 0;
   left: 0;
+  text-transform: uppercase;
   text-align: center;
   font-weight: bold;
   color: #ffffff;
-  padding-top: 22px;
-  padding-bottom: 22px;
+
   background-color: rgba(47, 48, 58, 0.8);
 }
 
@@ -427,6 +429,55 @@ div.background {
   background-color: var(--accent-text-color);
 }
 
+/* __________________________________Модальное окно _____________________________ */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 528px;
+  min-height: 581px;
+  /* padding: 20px; */
+  background-color: #ffffff;
+}
+.close-button {
+  position: absolute;
+  display: flex;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+.close {
+  /* width: 30px;
+  height: 30px; */
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 /* ____________СТРАНИЦА ПОРТФОЛИО__________________
 /* ____________Эффект текущей страницы_____________ */
 .link.current {
@@ -473,11 +524,19 @@ div.background {
 .portfolio-thumb {
   position: relative;
 }
+.portfolio-thumb::before {
+  position: absolute;
+  top: 0;
+  content: "";
+  background-color: rgba(33, 150, 243, 0.9);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
 .legend {
   position: absolute;
   top: 0;
-  background-color: rgba(33, 150, 243, 0.9);
-  height: 294px;
+
   padding: 63px 24px;
   margin-top: 0;
   margin-bottom: 0;
@@ -493,6 +552,9 @@ div.background {
   color: #ffffff;
 }
 .portfolio-link:hover .legend {
+  opacity: 1;
+}
+.portfolio-link:hover .portfolio-thumb::before {
   opacity: 1;
 }
 

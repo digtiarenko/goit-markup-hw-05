@@ -45,7 +45,10 @@
       <!--______________ Главная секция ______________ -->
       <section class="hero-container">
         <h1 class="hero-title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ<br />ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-        <a class="blue-button" href="#">Заказать услугу</a>
+        <button class="blue-button" data-modal-open type="button">
+          Заказать услугу
+        </button>
+        <!-- <a class="blue-button" data-modal-open href="#">Заказать услугу</a> -->
       </section>
 
       <!--_____________ Наши преимущества________________ -->
@@ -390,5 +393,16 @@
         </div>
       </div>
     </footer>
+    <!-- ________________________________________MОДАЛЬНОЕ ОКНО ______________________________________ -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-button" data-modal-close>
+          <svg class="close" width="30" height="30">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
