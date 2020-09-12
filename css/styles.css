@@ -486,16 +486,22 @@ div.background {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  transition: linear 500ms;
+}
+
+.is-hidden .modal {
+  transform: scale(0.1);
 }
 .modal {
+  transform: scale(1);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
+  transition: transform 250ms;
   min-width: 528px;
   min-height: 581px;
-  /* padding: 20px; */
   background-color: #ffffff;
 }
 .close-button {
@@ -512,9 +518,6 @@ div.background {
   background-color: #fff;
 }
 .close {
-  /* width: 30px;
-  height: 30px; */
-
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
